@@ -1,0 +1,175 @@
+body{
+    margin: 0;
+    background: #0D1117;
+    font-family: "Jersey 15";
+    font-weight: 400;
+    font-style: normal;
+
+}
+
+
+header{
+    width: 100%;
+    /*border: wheat;*/
+    border-bottom: mintcream solid 2px;
+    box-sizing: border-box;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    font-size: 24px;
+    /*border: wheat solid 2px;*/
+
+}
+
+header>nav{
+    height: fit-content;
+    align-self: center;
+    /*border: wheat solid 2px;*/
+
+}
+
+header > nav > a {
+    text-decoration: none;
+    margin: 0px 10px;
+    color: mintcream;
+}
+
+section{
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+
+#home-content{
+    justify-content: flex-start;
+    color: mintcream;
+    min-height: calc(100vh - 80px);
+    /*border: wheat solid 2px;*/
+    padding-top: 3%;
+    padding-left: 10%;
+    padding-right: 5%;
+
+
+
+}
+
+section > img{
+    /*border: wheat solid 2px;*/
+
+}
+
+
+/* this is what removes the gap between the line made due to padding */
+#sout , #greetings , #Name, #role{
+    margin: 0;
+}
+
+#sout{
+    font-size: 35px;
+    color: #00FF41;
+    margin-bottom: 10px;
+}
+
+#greetings{
+    font-size: 80px;
+    color: #00FF41;
+    margin-top:-10px ;
+}
+
+#Name{
+    font-size: 128px;
+    color: #00FF41;
+}
+
+#role{
+    font-size: 60px;
+}
+
+#hero_para{
+    font-size: 20px;
+    margin-top: 41px;
+}
+
+
+
+
+button{
+    padding: 2% 4%;
+    border-radius: 25px;
+    font-family: inherit;
+
+}
+
+.hero-btn{
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+
+}
+
+#contact_btn{
+    background:green ;
+    border: #FFFFFF solid 3px;
+    background: linear-gradient(180deg, #00E676 0%, #00D46D 17% ,#00B85F 45% , #00934B 81% , #008042 100% );
+    box-shadow: 0px 0px  30px  #00E676;
+    font-size: 40px;
+    color: #FFFFFF;
+}
+
+#CV_btn{
+    border: #01C064 solid 3px;
+    background:#0D1117 ;
+    font-size: 40px;
+    color: #01C064;
+}
+
+
+.hero-img {
+    width: 100%;
+    box-sizing: border-box;
+    max-width: 500px;
+    border: #01C064 solid 3px;
+
+}
+
+#intrests{
+    width: 100%;
+    height: 100px;
+    border: #01C064 solid 3px;
+    box-sizing: border-box;
+    background: #004222;
+
+
+
+
+}
+
+#scroll{
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    animation-name: scroll-x;
+    animation-duration: 30000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    font-size: 64px;
+    color: #FFFFFF;
+
+}
+
+
+
+@keyframes scroll-x {
+    0%   {
+        left: 0;
+    }
+
+    100% {
+             left: -50%;
+    }
+}
+
+
+

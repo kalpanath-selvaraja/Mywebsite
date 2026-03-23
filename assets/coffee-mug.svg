@@ -1,0 +1,98 @@
+<svg width="100%" viewBox="0 0 480 420" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="mugbody" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#1a2330"/>
+      <stop offset="40%" stop-color="#1e2a3a"/>
+      <stop offset="100%" stop-color="#111820"/>
+    </linearGradient>
+    <linearGradient id="mugrim" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2a3a4a"/>
+      <stop offset="100%" stop-color="#1a2330"/>
+    </linearGradient>
+    <linearGradient id="coffee" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3d1f0d"/>
+      <stop offset="100%" stop-color="#1a0a04"/>
+    </linearGradient>
+    <linearGradient id="steam1" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0%" stop-color="#00e676" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#00e676" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="steam2" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0%" stop-color="#00e676" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#00e676" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="highlight" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#00e676" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#00e676" stop-opacity="0"/>
+    </linearGradient>
+    <style>
+      @keyframes steam-a { 0%{transform:translateY(0) scaleX(1);opacity:0.7} 50%{transform:translateY(-28px) scaleX(1.3);opacity:0.4} 100%{transform:translateY(-56px) scaleX(0.8);opacity:0} }
+      @keyframes steam-b { 0%{transform:translateY(0) scaleX(1);opacity:0.5} 50%{transform:translateY(-22px) scaleX(0.9);opacity:0.3} 100%{transform:translateY(-44px) scaleX(1.1);opacity:0} }
+      @keyframes steam-c { 0%{transform:translateY(0);opacity:0.6} 50%{transform:translateY(-32px) scaleX(1.2);opacity:0.35} 100%{transform:translateY(-64px) scaleX(0.7);opacity:0} }
+      @keyframes flicker { 0%,100%{opacity:0.55} 50%{opacity:0.8} }
+      @media (prefers-reduced-motion: no-preference) {
+        .sa { animation: steam-a 2.4s ease-out infinite; }
+        .sb { animation: steam-b 2.8s ease-out infinite 0.6s; }
+        .sc { animation: steam-c 2.1s ease-out infinite 1.2s; }
+        .glow-pulse { animation: flicker 3s ease-in-out infinite; }
+      }
+    </style>
+  </defs>
+
+  <g transform="translate(60, 30)">
+    <!-- Steam wisps -->
+    <g class="sa" style="transform-origin: 110px 95px">
+      <path d="M95 95 Q80 75 100 55 Q120 35 105 15" fill="none" stroke="url(#steam1)" stroke-width="3" stroke-linecap="round"/>
+    </g>
+    <g class="sb" style="transform-origin: 140px 95px">
+      <path d="M140 95 Q155 72 135 50 Q115 28 132 8" fill="none" stroke="url(#steam2)" stroke-width="2.5" stroke-linecap="round"/>
+    </g>
+    <g class="sc" style="transform-origin: 170px 95px">
+      <path d="M168 95 Q152 70 172 48 Q192 26 175 6" fill="none" stroke="url(#steam1)" stroke-width="2" stroke-linecap="round"/>
+    </g>
+
+    <!-- Mug body -->
+    <path d="M40 105 L60 340 Q60 355 78 355 L202 355 Q220 355 220 340 L240 105 Z" fill="url(#mugbody)"/>
+    <path d="M40 105 L60 340 Q60 355 78 355 L202 355 Q220 355 220 340 L240 105 Z" fill="none" stroke="#00e676" stroke-width="1.5" stroke-opacity="0.4"/>
+
+    <!-- Side highlight -->
+    <path d="M42 120 L58 325 Q58 348 70 352 L88 352 L68 120 Z" fill="url(#highlight)"/>
+
+    <!-- Rim -->
+    <ellipse cx="140" cy="105" rx="100" ry="16" fill="url(#mugrim)" stroke="#00e676" stroke-width="1.5" stroke-opacity="0.5"/>
+
+    <!-- Coffee surface -->
+    <ellipse cx="140" cy="107" rx="88" ry="13" fill="url(#coffee)"/>
+    <ellipse cx="120" cy="107" rx="30" ry="4" fill="#5c2d10" opacity="0.4"/>
+
+    <!-- Handle -->
+    <path d="M228 165 Q298 165 298 225 Q298 282 228 282" fill="none" stroke="#00e676" stroke-width="12" stroke-opacity="0.15" stroke-linecap="round"/>
+    <path d="M228 165 Q294 165 294 225 Q294 278 228 282" fill="none" stroke="#111820" stroke-width="8"/>
+    <path d="M228 165 Q294 165 294 225 Q294 278 228 282" fill="none" stroke="#00e676" stroke-width="1.5" stroke-opacity="0.45"/>
+
+    <!-- Bottom -->
+    <ellipse cx="140" cy="355" rx="70" ry="9" fill="#111820" stroke="#00e676" stroke-width="1" stroke-opacity="0.25"/>
+
+    <!-- Terminal text -->
+    <text font-family="'Jersey 15', monospace" font-size="13" fill="#00e676" opacity="0.9" x="70" y="185">$ brew coffee</text>
+    <text font-family="'Jersey 15', monospace" font-size="11" fill="#00e676" opacity="0.6" x="70" y="205">// fuelled by caffeine</text>
+    <text font-family="'Jersey 15', monospace" font-size="11" fill="#00e676" opacity="0.5" x="70" y="222">// powered by code</text>
+
+    <!-- Blinking cursor -->
+    <rect class="glow-pulse" x="70" y="234" width="8" height="12" rx="1" fill="#00e676"/>
+
+    <!-- Scanlines -->
+    <path d="M42 145 L238 145" stroke="#00e676" stroke-width="0.3" stroke-opacity="0.08"/>
+    <path d="M45 168 L235 168" stroke="#00e676" stroke-width="0.3" stroke-opacity="0.08"/>
+    <path d="M47 191 L233 191" stroke="#00e676" stroke-width="0.3" stroke-opacity="0.08"/>
+    <path d="M49 214 L231 214" stroke="#00e676" stroke-width="0.3" stroke-opacity="0.08"/>
+    <path d="M51 237 L229 237" stroke="#00e676" stroke-width="0.3" stroke-opacity="0.08"/>
+    <path d="M53 260 L227 260" stroke="#00e676" stroke-width="0.3" stroke-opacity="0.08"/>
+    <path d="M55 283 L225 283" stroke="#00e676" stroke-width="0.3" stroke-opacity="0.08"/>
+    <path d="M57 306 L223 306" stroke="#00e676" stroke-width="0.3" stroke-opacity="0.08"/>
+    <path d="M59 329 L221 329" stroke="#00e676" stroke-width="0.3" stroke-opacity="0.08"/>
+
+    <!-- Glow under mug -->
+    <ellipse cx="140" cy="364" rx="65" ry="5" fill="#00e676" opacity="0.07"/>
+  </g>
+</svg>
