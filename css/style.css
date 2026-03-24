@@ -18,7 +18,6 @@ header{
     justify-content: space-between;
     padding: 10px;
     font-size: 24px;
-    /*border: wheat solid 2px;*/
 
 }
 
@@ -46,7 +45,6 @@ header > nav > a {
     justify-content: flex-start;
     color: mintcream;
     min-height: calc(100vh - 80px);
-    /*border: wheat solid 2px;*/
     padding-top: 3%;
     padding-left: 10%;
     padding-right: 5%;
@@ -55,10 +53,6 @@ header > nav > a {
 
 }
 
-section > img{
-    /*border: wheat solid 2px;*/
-
-}
 
 
 /* this is what removes the gap between the line made due to padding */
@@ -176,8 +170,6 @@ button{
 .about-me-content{
     display: flex;
     justify-content: space-evenly;
-
-    /*padding-right:100px*/
 }
 
 .about-img {
@@ -192,21 +184,14 @@ button{
     margin-left: 14vw;
     font-size: 40px;
     color: #FFFFFF;
-
-    /*border: #01C064 solid 2px;*/
-
-
 }
 
 .about-me{
     height: 626px;
-    /*border: #01C064 solid 2px;*/
 }
 
 #content{
-    color: #01C064;
-
-    /*border: #01C064 solid 2px;*/
+    color: #FFFFFF;
 }
 
 #about-me-para{
