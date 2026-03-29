@@ -2,98 +2,157 @@ html{
     scroll-behavior: smooth;
 }
 
-:root{
-
+*{
+    margin: 0;
+    padding: 0;
 }
 
+:root{
+    --bagcolour1 :#0a0e0a;
+    --bagcolour2 :#0d120d;
+}
+
+
+
 body{
-    margin: 0;
-    background: #0d120d;
+    min-height: 100vh;
+    background: var(--bagcolour1);
     font-family: "Jersey 15";
     font-weight: 400;
     font-style: normal;
+    padding-top: 65px;
 }
 
 
-header{
-    width: 100%;
-    position: fixed;
-    border-bottom: mintcream solid 2px;
-    box-sizing: border-box;
+nav{
     height: 65px;
-    display: flex;
-    justify-content: space-between;
-    padding: 10px;
     font-size: 24px;
     background:#0b1a0e;
     border-bottom: 1px solid #558B2F;
+    position: fixed;
+    top: 0;
+    width: 100%;
     z-index: 100;
+    box-sizing: border-box;
 }
 
-header>nav{
-    height: fit-content;
-    align-self: center;
+.sidebar{
+    position: fixed;
+    top:0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 100;
+    background-color: #0b1a0e;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    display: none;
 }
 
-header > nav > a {
-    text-decoration: none;
-    margin: 0px 10px;
-    color: mintcream;
+ nav > ul {
+    width: 100%;
+     list-style: none;
+     display: flex;
+     justify-content: flex-end;
+     align-items: center;
 }
 
+ nav > ul > li{
+     height: 65px;
+
+ }
+
+ a{
+     height: 100%;
+     padding: 0 30px;
+     text-decoration: none;
+     display: flex;
+     align-items: center;
+     color: #f9f8ff;
+ }
+
+ nav li:first-child{
+     margin-right: auto;
+ }
+
+
+
+
+
+
+
+
+
+/*=================================  Home Section ===========================================================*/
+
+
+/*home*/
 .home{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-evenly
 
 }
 
 
+/*content block*/
 #home-content{
     justify-content: flex-start;
     color: mintcream;
+    height: 100vh;
     min-height: calc(100vh - 80px);
     padding-top: 9%;
     padding-left: 10%;
     padding-right: 5%;
+    box-sizing: border-box;
+
+    /*border: #FFFFFF solid;*/
+
 
 }
 
-
-
+/*Fonts and colour*/
 
 /* this is what removes the gap between the line made due to padding */
 #sout , #greetings , #Name, #role{
     margin: 0;
 }
 
+/* small intro line */
 #sout{
-    font-size: 35px;
+    font-size: clamp(16px, 2vw, 35px);
     color: #00FF41;
     margin-bottom: 10px;
+    /*border: #FFFFFF solid;*/
 }
 
+/* Hi, I'm */
 #greetings{
-    font-size: 80px;
+    font-size: clamp(28px, 5vw, 80px);
     color: #00FF41;
-    margin-top:-10px ;
+    margin-top: -5px;
 }
 
+/* NAME (main hero text) */
 #Name{
-    font-size: 128px;
+    font-size: clamp(40px, 10vw, 128px);
     color: #00FF41;
+    /*line-height: 1.1;*/
 }
 
+/* role */
 #role{
-    font-size: 60px;
+    font-size: clamp(20px, 4vw, 60px);
 }
 
+/* paragraph */
 #hero_para{
-    font-size: 20px;
-    margin-top: 41px;
+    font-size: clamp(14px, 1.5vw, 20px);
+    margin-top: 20px;
 }
 
-
-
+/*!*Buttons*!*/
 
 button {
     padding: 2% 4%;
@@ -105,7 +164,6 @@ button {
 
 .hero-btn{
     display: flex;
-    gap: 10px;
     margin-top: 20px;
 
 }
@@ -117,6 +175,7 @@ button {
     box-shadow: 0px 0px  30px  #00E676;
     font-size: 40px;
     color: #FFFFFF;
+    margin-right: 10px;
 }
 
 #CV_btn{
@@ -126,39 +185,50 @@ button {
     color: #01C064;
 }
 
+/*image*/
 
 .hero-img {
     width: 100%;
     box-sizing: border-box;
     max-width: 500px;
     padding-bottom: 167px;
+    /*border: #FFFFFF solid 2px;*/
 }
 
-#intrests{
+
+
+
+/*=================================  Home Section ===========================================================*/
+
+
+
+
+
+
+.interest{
+    background-color: #00B85F;
     width: 100%;
-    height:auto;
-    align-self: center;
+    height:10vh;
+    /*margin-top: 20px;*/
     box-sizing: border-box;
-    background: #006622;
-    border-bottom: 2px #00ff412e solid;
-    border-top: 2px #00ff412e solid;
-    background: #006622;
-    position: relative;
-    z-index: 1;
+    overflow: hidden;
 }
 
 
 #scroll{
-    position: relative;
-    display: flex;
-    justify-content: space-evenly;
-
+    /*position: relative;*/
+    display: inline-flex;
+    /*justify-content: space-evenly;*/
+    gap: 3rem;
+    width: max-content;
     animation-name: scroll-x;
-    animation-duration: 30000ms;
+    animation-duration: 10s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
-    font-size: 44px;
+    font-size: 40px;
     color: #FFFFFF;
+    /*overflow: hidden;*/
+    padding: 10px 0;
 
 }
 
@@ -166,25 +236,25 @@ button {
 
 @keyframes scroll-x {
     0%   {
-        left: 0;
+        transform: translateX(0);
     }
 
     100% {
-        left: -50%;
+        transform: translateX(-50%);
     }
 }
 
-
-
+/*=================================  About me Section ===========================================================*/
 
 
 .about-me-content{
     display: flex;
     justify-content: space-evenly;
-    height: auto;
+    padding-top: 10vh;
+
 }
 
-.about-img {
+#image-div {
     width: 100%;
     box-sizing: border-box;
     max-width: 500px;
@@ -193,56 +263,59 @@ button {
 }
 
 .sub-title{
+    margin-top: 10vh;
     margin-left: 14vw;
-    font-size: 40px;
+    font-size: clamp(24px, 3vw, 40px);
     color: #FFFFFF;
+    /*border: #f60101 solid 2px;*/
+
 
 }
 
 .about-me{
-    height: 667px;
-
+    height: calc(100vh - 15vh);
+    width: 100%;
     /*border: #FFFFFF solid 2px;*/
-
+    background-color:#0d120d ;
 }
 
-#content{
+
+
+.para{
+    font-size: clamp(14px, 1.5vw, 20px);
     color: #FFFFFF;
-}
 
-#about-me-para{
-    font-size:20px ;
 }
 
 #image-div{
     position: relative;
     left: 5vw;
-    width: 300px;
-    height: 300px;
-    border: #01C064 solid 2px;
-    /*border: #FFFFFF solid 2px;*/
-
-
+    max-width: 300px;
+    min-width: 150px;
 
 
 }
 
 .about-img{
-    /*background-repeat: no-repeat;*/
-    /*background-size: cover;*/
-    background-position: center;
+    width: 100%;
+    height: auto;
+    display: block;
+
 
 }
+
+/*!*=================================  skill Section ===========================================================*!*/
+
 
 
 .strip{
     margin-bottom: 0;
     border-top: 0;
     width: 100%;
-    height: 2rem;
+    height: 8vh;
     background: #00B85F;
     overflow: hidden;
-
+    /*border: #0b0bec solid 2px;*/
 
 }
 
@@ -253,13 +326,13 @@ button {
     align-self: center;
     align-content: center;
     padding-top: 0.5rem;
+    font-size: 25px;
 
-    animation: scroll-skill 30s linear infinite;
+    animation: scroll-skill;
     animation-iteration-count: infinite;
+    animation-timing-function: linear;
     animation-duration: 30000ms;
     animation-direction: normal;
-
-
 
 
 }
@@ -289,14 +362,14 @@ button {
 
 .skill-icon-strip{
 
-
-    position: relative;
-
-    /*border: #FFFFFF solid 2px;*/
-
-
-
+    margin-top: 20vh;
 }
+
+
+/*!*=================================  Skill Section ===========================================================*!*/
+
+
+
 
 .icon-layer{
     display: flex;
@@ -304,11 +377,11 @@ button {
     left: 0;
     right: 0;
     margin: auto;
-    width: 800px;
-    height: 90px;
-    /*border: #FFFFFF solid 2px;*/
+    width: 100%;
+    height: 20vh;
     background: #0d1c0d;
     border-radius: 15px;
+    /*border: #0b0bec solid 2px;*/
 
 }
 
@@ -335,6 +408,122 @@ button {
         transform: translateY(0px);
     }
 }
+
+/* ================================================  education and experience  =============================================== */
+
+
+
+.education-experience{
+    width: 100%;
+    height: 93vh;
+    /*border: #f60101 solid 2px;*/
+
+    background-color:var(--bagcolour2) ;
+
+}
+
+
+#experience{
+    width: 30%;
+    padding-left: 20px;
+    border-left: 2px solid #00ff41;
+
+}
+
+#eduex-block{
+    display: flex;
+    justify-content: space-evenly;
+    /*border: #f60101 solid 2px;*/
+    margin-top: 20vh;
+    box-sizing: border-box;
+
+}
+
+#edu-title, #ex-title{
+    color: mintcream;
+    font-size: 30px;
+
+
+}
+
+#education01 {
+
+    border-left: 2px solid #00ff41;
+    padding-left: 20px;
+}
+
+.eduex-para{
+    color: mintcream;
+    font-size:clamp(14px, 1.5vw, 25px);
+    /*padding-left: 20px;*/
+    padding-top: 50px;
+}
+
+
+/* ================================================  Header - Mobile (320 - 600)  =============================================== */
+@media   (max-width: 600px){
+
+    .hide{
+        display: none;
+    }
+
+    #scroll{
+        font-size: 20px;
+    }
+
+    #CV_btn, #contact_btn{
+        font-size: 20px;
+    }
+
+    .home {
+       display: flex;
+        justify-content: center;
+    }
+
+    #home-content{
+        text-align: center;
+        padding: 40px 0  0  0;
+    }
+
+    .hero-img{
+        display: none;
+    }
+}
+
+
+
+
+/* ================================================  Header - Tab (600 - 1024)  =============================================== */
+
+@media (min-width:601px ) and (max-width: 1024px){
+    nav{
+        font-size: 19px;
+    }
+
+    a{
+        padding: 0 8px;
+    }
+
+    #scroll{
+        font-size: 30px;
+    }
+
+    .hero-img{
+        max-width: 300px;
+    }
+}
+
+@media (min-width:601px ) and (max-width: 1239px) {
+
+    #CV_btn, #contact_btn{
+        font-size: 25px;
+
+    }
+
+
+}
+
+
 
 
 
