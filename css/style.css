@@ -67,7 +67,7 @@ nav > ul > li{
 
 }
 
-a{
+.nav-links{
     height: 100%;
     padding: 0 30px;
     text-decoration: none;
@@ -599,7 +599,7 @@ button {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 60px;
-    max-width: 1100px;
+    max-width: 1500px;
 }
 
 .contact-title{
@@ -690,7 +690,7 @@ button {
 }
 
 .info-label {
-    font-size: 10px;
+    font-size: 31px;
     color: #00ff41;
     letter-spacing: 3px;
     text-transform: uppercase;
@@ -701,7 +701,7 @@ button {
 
 .info-value {
 
-    font-size: 15px;
+    font-size: 28px;
     font-weight: 600;
     color: #fff;
     margin-bottom: 4px;
@@ -709,7 +709,7 @@ button {
 
 
 .info-sub {
-    font-size: 12px;
+    font-size: 17px;
     color: #f9f8ff;
 }
 
@@ -718,17 +718,63 @@ button {
     display: flex;
     flex-direction: column;
     gap: 32px;
-    padding-top: 8px;
+    padding-top: 35px;
 }
 
 
+/*====== Footer section =======*/
 
+.footer{
+    border-top: #00934B solid 2px;
 
+}
 
+.footer-content{
+    display: flex;
+    flex-direction: column;
+}
 
+.footer-block{
+    display: flex;
+    justify-content: space-evenly;
+}
 
+.footer-left{
+    color: #f9f8ff;
+    padding: 40px;
 
+}
 
+.socials{
+    margin-top: 40px;
+}
+
+.links{
+    padding: 0px 30px;
+    text-decoration: none;
+    /*display: flex;*/
+    align-items: center;
+    color: #f9f8ff;
+
+}
+
+.footer-left p,
+.footer h3{
+    font-size: 20px;
+}
+
+.footer-bottom{
+    border-top: #01C064 solid 2px;
+}
+
+.copyright{
+
+    display: flex;
+    justify-content: center;
+    color: #f9f8ff;
+    font-size: 30px;
+    padding: 40px 20px;
+}
 
 
 
