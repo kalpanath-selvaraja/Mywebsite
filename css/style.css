@@ -82,6 +82,11 @@ body{
     margin: auto;
 }
 
+.link{
+    text-decoration:none;
+    color: #FFFFFF;
+}
+
 /*!*==================== hero section*!*/
 
 .home{
@@ -157,6 +162,10 @@ button {
 
 }
 
+a:hover{
+    background-color: #FFFFFF;
+}
+
 .hero-btn{
 
     display: flex;
@@ -181,4 +190,52 @@ button {
     background:#0D1117 ;
 
     color: #01C064;
+}
+
+/* horizontal-scroll */
+
+.horizontal-scroll {
+    width: 100%;
+    display: flex;
+    /*border: #00934B solid;*/
+    overflow: hidden;
+}
+
+.horizontal-scroll ::-webkit-scrollbar{
+    display: none;
+}
+
+
+
+
+
+.group{
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    animation: scroll 20s infinite linear;
+    /*height: 10vh;*/
+    padding-right:2em ;
+    background-color: #00B85F;
+}
+
+.card{
+    color: #FFFFFF;
+    height: auto;
+    padding-right: 3em;
+    text-align: center;
+    align-items: center;
+    /*border: blue solid;*/
+    /*font-size: 20px;*/
+    /*display: flex;*/
+    white-space: nowrap;
+}
+
+@keyframes scroll {
+    from{
+        translate: 0;
+    }
+    to{translate: -100%}
+
+
 }
