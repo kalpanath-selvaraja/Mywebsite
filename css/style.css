@@ -217,7 +217,7 @@ a:hover{
     display: flex;
     align-items: center;
     gap: 1em;
-    animation: scroll 20s infinite linear;
+    animation: scroll 45s infinite linear;
     /*height: 10vh;*/
     padding-right:2em ;
     background-color: #00B85F;
