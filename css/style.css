@@ -15,6 +15,7 @@
 
     --greetings:clamp(0.95rem, 2.5vw, 4rem);
     --h1:clamp(3.5rem, 13vw, 10rem);
+    --h2: clamp(1.8rem, 4vw, 3rem);
     --position:clamp(1rem, 2.5vw, 1.5rem);
     --para: clamp(0.875rem, 1.5vw, 1rem);
 
@@ -199,6 +200,9 @@ a:hover{
     display: flex;
     /*border: #00934B solid;*/
     overflow: hidden;
+    position: relative;
+    z-index: -1;
+
 }
 
 .horizontal-scroll ::-webkit-scrollbar{
@@ -229,6 +233,7 @@ a:hover{
     /*font-size: 20px;*/
     /*display: flex;*/
     white-space: nowrap;
+
 }
 
 @keyframes scroll {
@@ -238,4 +243,77 @@ a:hover{
     to{translate: -100%}
 
 
+}
+
+/* About me Section */
+
+.about-me{
+    height: 100vh;
+}
+
+.sub-title{
+    color: #FFFFFF;
+    font-size: var(--h2);
+    font-family: 'Share Tech Mono', monospace;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 5rem;
+    letter-spacing: 0.05em;
+}
+
+.about-me-content{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 3rem;
+    padding: 0 clamp(1rem, 5vw, 5rem);
+    margin-top: 1.5rem;
+
+
+
+}
+
+.image{
+    border: #00934B solid;
+}
+
+.content{
+    font-size: var(--para);
+    margin-top: 20px;
+    line-height: 1.7;
+    width: min(520px, 90%);
+    color: #FFFFFF;
+    padding-bottom: 0;
+    flex: 1;
+
+
+}
+
+.about-img {
+
+    width: 100%;
+    height: auto;
+    max-width: 380px;
+    object-fit: cover;
+    display: block;
+    border-radius: 12px;
+}
+
+.image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    max-width: 380px;
+    flex-shrink: 0;
+}
+@media (max-width: 768px) {
+    .about-me-content {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .about-img {
+        max-width: 100%;
+    }
 }
