@@ -62,7 +62,7 @@ body{
     /*border-radius: 50px;*/
     margin-top: 10px;
     color: mintcream;
-    font-family: Inter;
+    /*font-family: Roboto;*/
     font-size: 20px;
     height: 65px;
     z-index: 100;
@@ -117,14 +117,14 @@ body{
 /* Hi, I'm */
 #greetings{
     font-size: var(--greetings);
-    color: #00FF41;
+    color: #00F5FF ;
 
 }
 
  /*NAME (main hero text)*/
 #Name{
     font-size:var(--h1);
-    color: #00FF41;
+    color: #00F5FF ;
     line-height: 0.9;
     letter-spacing: -0.02em;
     /*line-height: 1.1;*/
@@ -184,20 +184,36 @@ a:hover{
 }
 
 #contact_btn{
-    background:#0D1117 ;
-    /*border: #01C064 solid 3px;*/
-    border: #FFFFFF solid 3px;
-    background: linear-gradient(180deg, #00E676 0%, #00D46D 17% ,#00B85F 45% , #00934B 81% , #008042 100% );
-    /*box-shadow: 0px 0px  30px  #00E676;*/
 
-    color: #FFFFFF;
+        display: inline-block;
+        text-decoration: none;
+        text-align: center;
+        padding: 0.6em 1.6em;
+        border-radius: 25px;
+        font-family: 'Share Tech Mono', monospace;
+        font-size: var(--button);
+        cursor: pointer;
+        background: linear-gradient(180deg, #00E676 0%, #00D46D 17% ,#00B85F 45% , #00934B 81% , #008042 100% );
+        border: 2px solid #FFFFFF;
+        color: #f4f4f4;
+
 }
 
-#CV_btn{
+.normal_btn{
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
     border: #01C064 solid 3px;
-    background:#0D1117 ;
-
+    background:transparent ;
     color: #01C064;
+    border-radius: 25px;
+    padding: 0.6em 1.6em;
+    font-size: var(--button);
+    cursor: pointer;
+}
+
+a{
+    text-decoration: none;
 }
 
 /* horizontal-scroll */
@@ -285,7 +301,7 @@ a:hover{
     padding: 0 clamp(1rem, 5vw, 5rem);
     margin-top: 1.5rem;
 
-
+    border: white solid;
 
 }
 
@@ -302,7 +318,10 @@ a:hover{
     padding-bottom: 0;
     flex: 1;
 
+}
 
+#pro_btn{
+    margin: 20px 0;
 }
 
 .about-img {
@@ -321,6 +340,10 @@ a:hover{
     justify-content: center;
     max-width: 380px;
     flex-shrink: 0;
+}
+
+.btn_01{
+    margin: 20px 0px;
 }
 
 
@@ -437,13 +460,23 @@ a:hover{
     max-width: 1100px;
     margin: 0 auto;
     padding: 4rem 2rem;
-    border: white solid 2px;
+    /*border: white solid 2px;*/
 }
 
+.group-title{
+    color: #FFFFFF;
+    font-size: var(--greetings);
+    font-family: 'Share Tech Mono', monospace;
+    width: 100%;
+    display: flex;
+    /*justify-content: center;*/
+    margin-top: 5rem;
+    letter-spacing: 0.05em;
+}
 .eduex-grid{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    border: white solid 2px;
+    /*border: white solid 2px;*/
     gap: 1rem;
     margin-top: 2rem;
 }
@@ -453,15 +486,101 @@ a:hover{
     flex-direction: column;
     color: white;
     /*flex-wrap: wrap;*/
-    border: white solid 2px;
 
+    gap: 1rem;
+
+}
+
+.education01  {
+    border-left: var(--bright_green) solid 2px   ;
+    padding-left: 0.5rem;
+}
+
+.education02  {
+    border-left: var(--bright_green) solid 2px   ;
+    padding-left: 0.5rem;
+}
+
+.edu-title{
+    font-family: 'Syne', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: #e8e0d0;
+}
+
+.place{
+    font-family: 'DM Mono', monospace;
+    font-size: 12px;
+    color: var(--bright_green);
+}
+
+
+.period{
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: #9a9080;
+}
+
+
+/*     Projects*/
+
+
+.project{
+    width: 100%;
+    min-height: 100vh;
+    /*max-width: 400px;*/
+    margin: 0 auto;
+    padding: 4rem 2rem;
+}
+
+.projects-wrapper{
+    display: grid;
+
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
+    padding-top:3rem ;
+
+
+}
+
+.project-card{
+    display: flex;
+    flex-direction: column;
+    border: var(--bright_green) solid 2px;
+    /*padding: ;*/
+    background: #161616;
+    border-radius: 12px;
+    overflow: hidden;
+
+}
+
+.card-image{
+    width: 100%;
+    height: 280px;
+    position: relative;
+    overflow: hidden;
+
+    background: #161616;
+    flex-shrink: 0;
+}
+
+.project_img{
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+
+    display: block;
 }
 
 
 
-
-
-
+.card-content{
+    color: white;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+}
 
 
 
@@ -477,7 +596,7 @@ a:hover{
     }
 
     .skill-grid{
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr  ;
     }
 
     .skill-section{
@@ -524,5 +643,13 @@ a:hover{
 
     .eduex-grid{
         grid-template-columns: 1fr;
+    }
+
+    .projects-wrapper{
+        grid-template-columns: 1fr;
+    }
+
+    .card-image{
+        height: 200px;
     }
 }
