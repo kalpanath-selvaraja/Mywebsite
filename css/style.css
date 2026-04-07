@@ -534,31 +534,33 @@ a{
 
 
 .project_container{
-    max-width: 780px;
+    max-width: 1100px;
     margin: 0 auto;
     padding-bottom:  120px ;
 
 }
 
-.stack {
-    /*position: sticky;*/
+.stack { position: sticky;
     height: 100vh;
     display: flex;
     align-items: flex-start;
     padding-top: 80px;
-    border: white solid;
+    /*border: white solid;*/
+
 }
 
 .project-card {
+    display: flex;
     width: 100%;
-    background: var(--bagcolour1);
-    border: 1px solid rgba(107, 33, 168, 0.52);
+    background: #161616;
+    border: 1px solid rgba(240, 230, 211, 0.07);
     border-radius: 20px;
     overflow: hidden;
     will-change: transform;
     transition: box-shadow 0.4s ease, border-color 0.3s ease;
     box-shadow: 0 8px 40px rgba(0,0,0,0.5);
 }
+
 
 .stack:nth-child(1) { top: 0;  z-index: 1; }
 .stack:nth-child(2) { top: 24px; z-index: 2; }
@@ -586,6 +588,85 @@ a{
 /*   margin: 20px;*/
 /*}*/
 
+.project-image{
+    position: relative;
+    width: 50%;
+    height: 340px;
+    flex-shrink: 0;
+
+}
+.project-image img{
+    width: 100%;
+
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.project-image::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    /*border: white solid;*/
+    background: linear-gradient(to right, transparent 60%, #161616 100%);
+}
+
+
+.project-content{
+    flex: 1;
+    /*width: 100%;*/
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card_header{
+    color: #00F5FF;
+    opacity: 0.45;
+}
+
+.content_header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*.main_content{*/
+/*    padding-top: 20px;*/
+/*}*/
+
+/*.main_content h2{*/
+/*    font-size: 20px;*/
+/*}*/
+
+.main_content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 12px;
+}
+
+.main_content h2 {
+    font-size: clamp(16px, 2vw, 22px);
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+}
+
+.main_content p {
+    font-size: 13.5px;
+    color: rgb(168, 156, 142);
+    line-height: 1.7;
+}
+
+
+
+
+
+
 @media (max-width: 768px) {
     .about-me-content {
         flex-direction: column;
@@ -603,6 +684,31 @@ a{
     .skill-section{
         padding: 3rem 1.5rem;
     }
+
+    .stack{
+        position: sticky;
+        height: 100vh;
+        display: flex;
+        align-items: flex-start;
+        padding-top: 80px;
+        /*border: white solid;*/
+    }
+    .project-image{
+        position: relative;
+        width: 50%;
+        height: 100px;
+        flex-shrink: 0;
+
+    }
+    .project-image img{
+        width: 100%;
+
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+
 }
 
 @media (max-width: 600px) {
