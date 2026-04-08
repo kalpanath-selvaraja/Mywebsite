@@ -921,4 +921,37 @@ a:link, a:visited {
     .card-image{
         height: 200px;
     }
+
+
+    .contact-block{
+        display: grid;
+        grid-template-columns: 1fr ;
+    }
+
+    .terminal{
+        padding: 8px;
+    }
+
+    .field input, .field textarea{
+        padding: 10px 4px;
+    }
+
+    .field{
+        gap: 8px;
+        margin-bottom: 20px;
+    }
+
+    .contact-info{
+        margin-left: 4px;
+        margin-bottom: 4px;
+    }
+
+    #social_title{
+        margin-bottom: 30px;
+        margin-top: 30px;
+    }
+
+    .contact-info a {
+        font-size: 12px;
+    }
 }
