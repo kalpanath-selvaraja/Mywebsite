@@ -1000,8 +1000,10 @@ a:link, a:visited {
 @media (max-width: 380px) {
 
     .image{
-        width: auto;
+        width: 0px;
+        flex: 1;
     }
+
 
     .skill-section{
         grid-template-columns: 1fr;
