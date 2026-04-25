@@ -794,6 +794,12 @@ a:link, a:visited {
     transition: background 0.2s ease;
 }
 
+.btn-submit:hover {
+    background: var(--accent-hover);
+}
+
+
+
 
 
 
