@@ -999,6 +999,10 @@ a:link, a:visited {
 
 @media (max-width: 380px) {
 
+    .image{
+        width: auto;
+    }
+
     .skill-section{
         grid-template-columns: 1fr;
         gap: 0.8rem;
