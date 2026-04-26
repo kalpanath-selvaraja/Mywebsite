@@ -110,6 +110,9 @@ body {
     top: 10px;
 }
 
+
+
+
 /*navigation links ================> */
 .nav-links{
     display: flex;
@@ -125,10 +128,47 @@ body {
     color: var(--accent);
     border-bottom: 1px solid var(--accent);
 }
+
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    margin-right: 1rem;
+}
+
+.hamburger span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: var(--text-primary);
+    transition: all 0.3s ease;
+}
+
+
 a:link, a:visited {
     color: var(--text-primary);
     text-decoration: none;
     background: transparent;
+}
+
+a:hover{
+    background-color: transparent;
+    color: var(--accent-hover);
+}
+
+.hover-lift {
+    transition: transform 0.3s ease, box-shadow 0.4s ease, border-color 0.3s ease;
+}
+
+.hover-lift:hover {
+    transform: translateY(-8px);
+    border-color: var(--accent);
+    box-shadow: 0 20px 60px rgba(16, 245, 160, 0.15);
 }
 /*!*==================== hero section*!*/
 
@@ -219,10 +259,7 @@ button {
     transition: all 0.2s ease;
 }
 
-a:hover{
-    background-color: transparent;
-    color: var(--accent-hover);
-}
+
 
 .hero-btn{
     display: flex;
@@ -269,9 +306,6 @@ a:hover{
     color: var(--accent-hover);
 }
 
-a{
-    text-decoration: none;
-}
 
 /* horizontal-scroll */
 
@@ -752,7 +786,11 @@ a{
 }
 
 .contact-info{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
     margin-left: 40px;
+
 }
 
 .contact-info p{
@@ -936,6 +974,40 @@ a{
 
 
 @media (max-width: 768px) {
+
+    .navbar{
+        justify-content: space-between;
+    }
+
+    .hamburger{
+        display: flex;
+    }
+
+    .nav-links{
+        display: none;
+        position: fixed;
+        top: 65px;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        background: var(--bg-card);
+        border-bottom: 1px solid var(--border-accent);
+        padding: 1rem 0;
+    }
+
+
+    .nav-links.open {
+        display: flex;
+    }
+
+    .nav-links a {
+        width: 100%;
+        text-align: center;
+        padding: 1rem 0;
+        border-bottom: 1px solid var(--border);
+    }
+
     .about-me-content {
         flex-direction: column;
         gap: 2rem;
