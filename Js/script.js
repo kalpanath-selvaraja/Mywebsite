@@ -46,19 +46,21 @@ setTimeout(() => {
 
 
 
-const animatedEls = document.querySelectorAll(".reveal, .slide-left, .slide-right, .stagger-child");
+setInterval(() => {
+    const animatedEls = document.querySelectorAll(".reveal, .slide-left, .slide-right, .stagger-child");
 
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry, index) => {
-        if (entry.isIntersecting) {
-            setTimeout(() => {
-                entry.target.classList.add("visible");
-            }, entry.target.classList.contains("stagger-child") ? index * 100 : 0);
-        }
-    });
-}, { threshold: 0.15 });
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry, index) => {
+            if (entry.isIntersecting) {
+                setTimeout(() => {
+                    entry.target.classList.add("visible");
+                }, entry.target.classList.contains("stagger-child") ? index * 100 : 0);
+            }
+        });
+    }, { threshold: 0.15 });
 
-animatedEls.forEach(el => observer.observe(el));
+    animatedEls.forEach(el => observer.observe(el));
+},300);
 
 
 
