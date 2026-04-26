@@ -28,10 +28,9 @@
     --accent-hover:  #0cc980;
     --text-primary:  #F0E6D3;
     --text-muted:    #9a9080;
-    --border: rgba(214, 101, 101, 0.08);
+    --border: rgba(255, 255, 255, 0.08);
     --border-accent: rgba(16, 245, 160, 0.25);
 
-    --border2: rgba(54, 29, 158, 0.71);
     
 }
 
@@ -44,7 +43,6 @@ body {
 
     overflow-x: hidden;
 
-    background-color: var(--bg-colour);
     background-image:
             radial-gradient(circle at 15% 25%, rgba(0, 245, 255, 0.15) 0%, transparent 45%),
             radial-gradient(circle at 85% 75%, rgba(0, 180, 120, 0.12) 0%, transparent 45%),
@@ -337,6 +335,16 @@ button {
     padding-right:2em;
 
 }
+.group-reverse {
+    animation: scroll-left 45s infinite linear;
+}
+
+@keyframes scroll-left {
+    from { transform: translateX(-100%); }
+    to { transform: translateX(0); }
+}
+
+
 
 .card{
     color: var(--text-muted);
@@ -604,11 +612,17 @@ button {
     position: relative;
     z-index: 1;
     padding: 80px 32px 0;
+    min-height: 100vh;
 }
 
 .project_container{
     max-width: 1100px;
     margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 80px 32px 0;
+    gap: 1rem;
+
 }
 
 .stack {
@@ -617,6 +631,8 @@ button {
     display: flex;
     align-items: center;
     padding-top: 80px;
+    /*border: 10px solid var(--border);*/
+
 }
 
 .project-card {
@@ -624,16 +640,16 @@ button {
     width: 100%;
     background: var(--bg-card);
     border: 1px solid var(--border);
-    border-radius: 20px;
+    border-radius: 16px;
     overflow: hidden;
     will-change: transform;
     transition: box-shadow 0.4s ease, border-color 0.3s ease;
     box-shadow: 0 8px 40px rgba(0,0,0,0.5);
+    /*border: 10px solid var(--border);*/
+
 }
 
-.stack:nth-child(1) { top: 0;  z-index: 1; }
-.stack:nth-child(2) { top: 24px; z-index: 2; }
-.stack:nth-child(3) { top: 48px; z-index: 3; }
+
 
 #test01{
     width: 100%;
@@ -713,6 +729,9 @@ button {
     color: var(--text-muted);
     line-height: 1.7;
 }
+
+
+/* Assignments  */
 
 
 /* Contact */
@@ -982,9 +1001,6 @@ button {
 
 @media (max-width: 768px) {
 
-    .navbar{
-        justify-content: space-between;
-    }
 
     .hamburger{
         display: flex;
@@ -1039,6 +1055,10 @@ button {
         padding: 3rem 1.5rem;
     }
 
+    .project_container{
+        grid-template-columns: 1fr;
+        gap: 4rem;
+    }
     .project-card{
         flex-direction: column;
     }
@@ -1060,12 +1080,14 @@ button {
     .contact-block{
         grid-template-columns: 1fr;
     }
+
+    .footer{
+        margin-top: 20px;
+    }
 }
 
 @media (max-width: 600px) {
-    .skill-grid{
-        grid-template-columns: 1fr;
-    }
+
 
     .skill-section{
         padding: 2rem 1rem;
@@ -1085,10 +1107,7 @@ button {
         height: 28px;
     }
 
-    .contact-block{
-        display: grid;
-        grid-template-columns: 1fr;
-    }
+
 
     .terminal{
         padding: 8px;
@@ -1098,10 +1117,6 @@ button {
         padding: 10px 4px;
     }
 
-    .field{
-        gap: 8px;
-        margin-bottom: 20px;
-    }
 
     .contact-info{
         margin-left: 4px;
@@ -1127,57 +1142,16 @@ button {
     }
 
 
-    .skill-section{
-        grid-template-columns: 1fr;
-        gap: 0.8rem;
-    }
-
     .strip_icon img {
         width: 22px;
         height: 22px;
     }
 
-    .eduex-grid{
-        grid-template-columns: 1fr;
-    }
 
-    .projects-wrapper{
-        grid-template-columns: 1fr;
-    }
 
-    .card-image{
-        height: 200px;
-    }
 
-    .contact-block{
-        display: grid;
-        grid-template-columns: 1fr;
-    }
-
-    .terminal{
-        padding: 8px;
-    }
-
-    .field input, .field textarea{
+    .field textarea{
         padding: 10px 4px;
     }
 
-    .field{
-        gap: 8px;
-        margin-bottom: 20px;
-    }
-
-    .contact-info{
-        margin-left: 4px;
-        margin-bottom: 4px;
-    }
-
-    #social_title{
-        margin-bottom: 30px;
-        margin-top: 30px;
-    }
-
-    .contact-info a {
-        font-size: 12px;
-    }
 }
