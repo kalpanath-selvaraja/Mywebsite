@@ -26,24 +26,26 @@ document.addEventListener("DOMContentLoaded", function() {
 // Text show
 
     const role = document.getElementById("role");
-    const text = role.textContent;
 
-    role.textContent = "";
-    role.style.opacity = 1;
-    role.style.transform = "translateY(0)";
-    role.style.animation = "none";
+    if (role) {
+        const text = role.textContent;
+        role.textContent = "";
+        role.style.opacity = 1;
+        role.style.transform = "translateY(0)";
+        role.style.animation = "none";
 
-    setTimeout(() => {
-        let i = 0;
-        const type = () => {
-            if (i < text.length) {
-                role.textContent += text[i]; /* String */
-                i++;
-                setTimeout(type, 60);
-            }
-        };
-        type();
-    }, 50);
+        setTimeout(() => {
+            let i = 0;
+            const type = () => {
+                if (i < text.length) {
+                    role.textContent += text[i];
+                    i++;
+                    setTimeout(type, 60);
+                }
+            };
+            type();
+        }, 500);
+    }
 
 
 
@@ -68,17 +70,19 @@ document.addEventListener("DOMContentLoaded", function() {
     const hamburger = document.getElementById("hamburger");
     const navMenu = document.getElementById("nav-links");
 
-    hamburger.addEventListener("click", () => {
-        hamburger.classList.toggle("open");
-        navMenu.classList.toggle("open");
-    });
-
-    navMenu.querySelectorAll("a").forEach(link => {
-        link.addEventListener("click", () => {
-            hamburger.classList.remove("open");
-            navMenu.classList.remove("open");
+    if (hamburger && navMenu) {
+        hamburger.addEventListener("click", () => {
+            hamburger.classList.toggle("open");
+            navMenu.classList.toggle("open");
         });
-    });
+
+        navMenu.querySelectorAll("a").forEach(link => {
+            link.addEventListener("click", () => {
+                hamburger.classList.remove("open");
+                navMenu.classList.remove("open");
+            });
+        });
+    }
 
 
 
@@ -89,21 +93,22 @@ document.addEventListener("DOMContentLoaded", function() {
     const previewTitle = document.getElementById("preview-title");
     const previewTag = document.getElementById("preview-tag");
 
-    cards.forEach(card => {
-        card.addEventListener("click", () => {
-            cards.forEach(c => c.classList.remove("active"));
-            card.classList.add("active");
+    if (cards.length > 0) {
+        cards.forEach(card => {
+            card.addEventListener("click", () => {
+                cards.forEach(c => c.classList.remove("active"));
+                card.classList.add("active");
 
-            if (window.innerWidth <=  768){
-                window.open(card.getAttribute("data-file"), "_blank");
-            }else {
-                frame.src = card.getAttribute("data-file");
-                previewTitle.textContent = card.getAttribute("data-name");
-                previewTag.textContent = card.getAttribute("data-tag");
-            }
-
+                if (window.innerWidth <= 768) {
+                    window.open(card.getAttribute("data-file"), "_blank");
+                } else {
+                    frame.src = card.getAttribute("data-file");
+                    previewTitle.textContent = card.getAttribute("data-name");
+                    previewTag.textContent = card.getAttribute("data-tag");
+                }
+            });
         });
-    });
+    }
 
 });
 
