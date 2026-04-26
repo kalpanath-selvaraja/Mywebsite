@@ -27,20 +27,30 @@
             <img src="logo" alt="KS Portfolio">
         </div>
 
-        <div class="nav-links">
-            <a href="#" class="link active">Home</a>
+        <div class="nav-links" id="nav-links">
+
+            <a href="#home" >Home</a>
             <a href="#about">About Me</a>
             <a href="projects.html">projects</a>
             <a href="#contact">Contact</a>
         </div>
 
+        <button id="hamburger" class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
 
     </nav>
+
+
+
 </header>
 <main>
 
     <!--  Hero section-->
-    <section class ="home">
+    <section class ="home" id="home">
 
         <!-- content-->
         <div id ="home-content">
@@ -55,8 +65,8 @@
                     the tranquillity of nature. Every line of code tells a story.</p>
             </div>
             <div class="hero-btn">
-                <a href="#skill" id="contact_btn">Contact me</a>
-                <a href="#" class="normal_btn">Download CV</a>
+                <a href="#skill" id="contact_btn" class="hover-lift">Contact me</a>
+                <a href="#" class="normal_btn hover-lift">Download CV</a>
             </div>
         </div>
 
@@ -116,20 +126,20 @@
 
             <!-- image-->
 
-            <picture class="image">
+            <picture class="image slide-left">
                 <img src="assets/About_me_pic.png" class="about-img"  alt="kalpanath">
             </picture>
 
             <!-- details-->
-            <div class="content">
+            <div class="content slide-right">
                 <p class="para">I am a Software Engineering undergraduate with a strong interest in technology, and its real-world applications.
                     I enjoy learning new technologies and applying them to solve practical problems.
                     My passion for technology began at a young age and continues to grow through my School years.
                     I am also a good communicator who enjoys collaborating with others and working<br>effectively in team environments.</p>
 
 
-                <a href="#" class="normal_btn" id="pro_btn">view Projects</a>
-                <a href="#" class="normal_btn" id="exe_btn">view Exercises</a>
+                <a href="projects.html" class="normal_btn hover-lift" id="pro_btn">view Projects</a>
+                <a href="exercises.html" class="normal_btn hover-lift" id="exe_btn">view Exercises</a>
 
             </div>
 
@@ -231,7 +241,7 @@
 
         <div class="skill-grid reveal">
 
-            <div class="skill_card">
+            <div class="skill_card stagger-child">
                 <h3 class="skill_label">Languages</h3>
 
                 <div class="tags">
@@ -243,7 +253,7 @@
                 </div>
             </div>
 
-            <div class="skill_card">
+            <div class="skill_card stagger-child">
                 <h3 class="skill_label">Databases</h3>
 
                 <div class="tags">
@@ -251,8 +261,7 @@
                     <span class="tag">POSTGRES</span>
                 </div>
             </div>
-
-            <div class="skill_card">
+            <div class="skill_card stagger-child">
                 <h3 class="skill_label">Tools</h3>
 
                 <div class="tags">
@@ -264,9 +273,7 @@
                     <span class="tag">GitHub</span>
                 </div>
             </div>
-
-
-            <div class="skill_card">
+            <div class="skill_card stagger-child">
                 <h3 class="skill_label">Databases</h3>
 
                 <div class="tags">
@@ -322,7 +329,7 @@
         <h2 class="group-title" >education & experience</h2>
 
         <div class="eduex-grid">
-            <div class="education">
+            <div class="education slide-left">
 
                 <p class="sec-label">education</p>
                 <div class="education01">
@@ -344,7 +351,7 @@
                 </div>
             </div>
 
-            <div class="experience">
+            <div class="experience slide-right">
                 <p class="sec-label">Experience</p>
 
                 <div class="education01">
@@ -372,7 +379,7 @@
 
         <div class="contact-block reveal">
 
-            <div class="terminal">
+            <div class="terminal slide-left">
                 <form action="mailto:kalapanath87@gmail.com" method="POST" enctype="text/plain" class="form">
 
 
@@ -399,20 +406,20 @@
 
                     </form>
             </div>
-            <div class="contact-info">
+            <div class="contact-info slide-right">
                 <div id="social_title">
                     <p>// Find me online</p>
                 </div>
 
-                <div class="social-links">
+                <div class="social-links hover-lift">
                     <a href="https://www.github.com/" >GitHub ↗ </a>
                 </div>
 
-                <div class="social-links">
+                <div class="social-links hover-lift">
                     <a href="https://www.linkedin.com/" >LinkedIn ↗ </a>
                 </div>
 
-                <div class="social-links">
+                <div class="social-links hover-lift">
                     <a href="https://www.instagram.com/" >Instagram ↗ </a>
                 </div>
             </div>
