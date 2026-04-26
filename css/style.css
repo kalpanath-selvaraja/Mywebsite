@@ -1048,6 +1048,11 @@ button {
         height: 220px;
     }
 
+    .eduex-grid{
+        grid-template-columns: 1fr;
+    }
+
+
     .contact{
         padding: 3rem 1.5rem;
     }
