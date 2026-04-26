@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
-    setInterval(() => {
+    setTimeout(() => {
         const animatedEls = document.querySelectorAll(".reveal, .slide-left, .slide-right, .stagger-child");
 
         const observer = new IntersectionObserver((entries) => {
@@ -81,4 +81,36 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
 
+
+
+
+    const cards = document.querySelectorAll(".exercise-card");
+    const frame = document.getElementById("preview-frame");
+    const previewTitle = document.getElementById("preview-title");
+    const previewTag = document.getElementById("preview-tag");
+
+    cards.forEach(card => {
+        card.addEventListener("click", () => {
+            cards.forEach(c => c.classList.remove("active"));
+            card.classList.add("active");
+
+            if (window.innerWidth <=  768){
+                window.open(card.getAttribute("data-file"), "_blank");
+            }else {
+                frame.src = card.getAttribute("data-file");
+                previewTitle.textContent = card.getAttribute("data-name");
+                previewTag.textContent = card.getAttribute("data-tag");
+            }
+
+        });
+    });
+
 });
+
+
+
+
+
+
+
+
