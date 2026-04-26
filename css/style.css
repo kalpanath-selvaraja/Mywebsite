@@ -1018,7 +1018,10 @@ button {
     .about-me-content {
         flex-direction: column;
         gap: 2rem;
+        justify-content: center;
+        align-items: center;
     }
+
 
     .about-img {
         max-width: 100%;
