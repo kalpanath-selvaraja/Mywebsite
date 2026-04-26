@@ -1,3 +1,4 @@
+/* stylelint-disable */
 *{
     margin: 0;
     padding: 0;
@@ -23,12 +24,12 @@
     --bg-colour:    #0a0a0a;
     --bg-card:  #161616;
     --bg-fields:   #1f1f1f;
-    --accent:        #00F5FF;
-    --accent-hover:  #00c4cc;
+    --accent:        #10F5A0;
+    --accent-hover:  #0cc980;
     --text-primary:  #F0E6D3;
     --text-muted:    #9a9080;
     --border: rgba(214, 101, 101, 0.08);
-    --border-accent: rgba(0,245,255,0.25);
+    --border-accent: rgba(16, 245, 160, 0.25);
 
     --border2: rgba(54, 29, 158, 0.71);
     
@@ -39,10 +40,11 @@ html{
 }
 
 body {
-    /*background:*/
-    /*        radial-gradient(circle at 20% 30%, rgba(0, 34, 255, 0.68), transparent 40%),*/
-    /*        radial-gradient(circle at 80% 70%, rgba(115, 21, 255, 0.7), transparent 40%);*/
-
+    background-color: var(--bg-colour);
+    background-image:
+            radial-gradient(circle at 15% 25%, rgba(0, 245, 255, 0.15) 0%, transparent 45%),
+            radial-gradient(circle at 85% 75%, rgba(0, 180, 120, 0.12) 0%, transparent 45%),
+            radial-gradient(circle at 50% 50%, rgba(0, 100, 100, 0.08) 0%, transparent 55%);
 
 
     font-family: "Inter", sans-serif;  /* Inter for body text */
@@ -75,7 +77,7 @@ body {
 /*            linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);*/
 /*    background-size: 40px 40px;*/
 /*    pointer-events: none;*/
-/*    z-index: 0;*/
+/*    z-index: -40;*/
 /*}*/
 /*header ================>*/
 
@@ -84,6 +86,7 @@ body {
     top: 0;
     width: 100%;
     height: 65px;
+    z-index: 999;
 }
 
 
@@ -117,17 +120,16 @@ body {
     margin: auto;
 }
 
-.link{
-    text-decoration:none;
-    color: var(--text-primary);
-}
-
 
 .nav-links a.active {
     color: var(--accent);
     border-bottom: 1px solid var(--accent);
 }
-
+a:link, a:visited {
+    color: var(--text-primary);
+    text-decoration: none;
+    background: transparent;
+}
 /*!*==================== hero section*!*/
 
 .home{
@@ -139,7 +141,7 @@ body {
 #home-content{
     position: relative;
     width: 100%;
-    height: 100vh;
+    height: 100dvh;
     display: flex;
     color: var(--text-primary);
     justify-content: center;
@@ -337,7 +339,7 @@ a{
     width: 100%;
     display: flex;
     justify-content: center;
-    margin-top: 5rem;
+    margin-top: 0;
     letter-spacing: 0.05em;
 }
 
@@ -500,7 +502,7 @@ a{
     font-family: var(--font-title);
     width: 100%;
     display: flex;
-    margin-top: 5rem;
+    margin-top: 0;
     letter-spacing: 0.05em;
 }
 
@@ -689,10 +691,10 @@ a{
 
 .contact-intro h2{
     font-size: var(--h2);
-    font-weight: 800;
+    font-weight: 400;
     letter-spacing: -0.025em;
-    line-height: 1.1;
-    margin-bottom: 16px;
+    line-height: 1.6;
+    margin-bottom: 24px;
     color: var(--text-primary);
     font-family: var(--font-title);
 }
@@ -710,6 +712,8 @@ a{
 .contact-block{
     display: grid;
     grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
 }
 
 .terminal{
@@ -737,7 +741,7 @@ a{
 }
 
 .field textarea {
-    height: 120px;
+    height: 80px;
     resize: none;
     scrollbar-color: var(--accent) var(--bg-fields);
 }
@@ -763,11 +767,7 @@ a{
     letter-spacing: 0.05em;
 }
 
-a:link, a:visited {
-    color: var(--text-primary);
-    text-decoration: none;
-    background: transparent;
-}
+
 
 #social_title{
     border: none;
@@ -883,8 +883,9 @@ a:link, a:visited {
 
 .header {
     animation: navSlideDown 0.5s ease forwards;
+    /*animation-timeline:scroll();*/
+    animation-range: 0px 100px;
 }
-
 @keyframes navSlideDown {
     from {
         transform: translateY(-100%);
@@ -897,18 +898,40 @@ a:link, a:visited {
 }
 
 
+/*  About me animation  */
 
+.slide-left {
+    opacity: 0;
+    transform: translateX(-40px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
 
+.slide-left.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
 
+.slide-right {
+    opacity: 0;
+    transform: translateX(40px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
 
+.slide-right.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
 
+.stagger-child {
+    opacity: 0;
+    transform: translateY(25px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
 
-
-
-
-
-
-
+.stagger-child.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
 
 
 
@@ -937,6 +960,14 @@ a:link, a:visited {
     .project-image{
         width: 100%;
         height: 220px;
+    }
+
+    .contact{
+        padding: 3rem 1.5rem;
+    }
+
+    .contact-block{
+        grid-template-columns: 1fr;
     }
 }
 
@@ -1000,8 +1031,8 @@ a:link, a:visited {
 @media (max-width: 380px) {
 
     .image{
-        width: 0px;
-        flex: 1;
+        width: 100%;
+        max-width: 100%;
     }
 
 
