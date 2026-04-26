@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="web, html, css, javascript, js, java, python">
+    <meta name="description" content="World best web development tutorials">
+    <meta name="author" content="IJSE">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HW</title>
+
+    <link rel="stylesheet" href="../assets/lib/normalize.css">
+    <link rel="stylesheet" href="https://www.hxstrive.com/cdn/libs/font-awesome/7.0.1/css/all.min.css">
+
+
+    <style>
+
+        body{
+            background-color: white;
+        }
+
+        div{
+            position: relative;
+            width: 200px;
+            height: 50px;
+            background: rgba(107, 33, 168, 0.52);
+            transition-duration: 1500ms;
+            box-shadow: rgba(13, 17, 23, 0.79) 0px 3px 5px 1px;
+            margin-left: -9vw;
+            /*align-items: center;*/
+
+        }
+
+        span{
+            position: relative;
+            left: 10px;
+            top: 20%;
+            visibility: hidden;
+            color: white;
+            transition-duration: 1500ms;
+        }
+
+        .section{
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            height: 100vh;
+
+        }
+
+        div:hover {
+            margin-left: 1px;
+            width: 300px;
+
+        }
+        div:hover span {
+            visibility: visible;
+
+            font-size: larger;
+        }
+
+        #menu_01 , #menu_02 , #menu_03, #menu_04{
+            display: flex;
+            position: absolute;
+            right: 0;
+            top: 10%;
+            flex-shrink: 0;
+            visibility: visible;
+            font-size: 40px;
+            color: white;
+        }
+
+
+
+
+    </style>
+</head>
+    <section class="section">
+
+        <div> <i id="menu_01" class="fa-solid fa-address-book"></i> <span>Menu One  </span></div>
+        <div><i  id="menu_02"class="fa-solid fa-truck-medical"></i><span>Menu Two</span></div>
+        <div >
+            <i id="menu_03" class="fa-solid fa-passport"></i><span>Menu Three</span></div>
+        <div><i id="menu_04" class="fa-solid fa-cart-arrow-down"></i><span>Menu Four</span></div>
+
+    </section>
+
+<script src="https://www.hxstrive.com/cdn/libs/font-awesome/7.0.1/js/all.min.js"></script>
+
+<body>
+
+</body>
+</html>

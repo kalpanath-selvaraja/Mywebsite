@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel= "stylesheet"  href="../assets/lib/normalize.css">
+
+    <title>Exercise_01</title>
+
+</head>
+
+    <style>
+
+        .box{
+            width: 50vw;
+            height: 50vh;
+            position: relative;
+        }
+
+        #box_1{
+            background-color: red;
+
+        }
+
+        #box_2{
+            background-color: green;
+            left: 50vw;
+            bottom: 50vh;
+        }
+        #box_3{
+            background-color: orange;
+            bottom: 50vh;
+        }
+        #box_4{
+            background-color: deeppink;
+            bottom: 100vh;
+            left: 50vw;
+        }
+
+        /*circle and square*/
+        div{
+            background-color: white;
+            width: 200px;
+            height:200px;
+            border-radius: 100%;
+            position: absolute;
+        }
+
+        #corner_circle_1{
+            /*top: 0;*/
+            right: 93%;
+            bottom:85%;
+
+        }
+
+        #corner_circle_2{
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 120%;
+            margin: auto;
+        }
+
+        #corner_circle_3{
+            left: 93%;
+            bottom: 85%;
+        }
+
+        #corner_circle_4{
+           left: 93%;
+            bottom: 0;
+            top: 85%;
+
+        }
+
+        #corner_circle_5{
+            bottom: 0;
+            left: 0;
+
+            right: 0;
+            margin: auto;
+            top: 100%;
+        }
+
+        #corner_circle_6{
+            bottom: 0;
+            top: 85%;
+            right: 93%;
+
+        }
+
+        #center_circle_1{
+            left: calc(50% - 100px);
+            top: calc(50% - 100px);
+
+        }
+
+        #center_circle_2{
+
+            left: calc(50% - 100px);
+            top: calc(50% - 100px);
+
+        }
+
+        #center_circle_3{
+            left: calc(50% - 100px);
+
+
+            top: calc(50% - 100px);
+        }
+
+        #center_circle_4{
+            left: calc(50% - 100px);
+            top: calc(50% - 100px);
+
+        }
+
+        #center_square{
+            bottom: calc(50% - 100px);
+            left: 0;
+            right: 0;
+            margin: auto;
+            border-radius: 0;
+
+
+        }
+
+        #inner_square_1{
+            background-color: red;
+            width: 50px;
+            height: 50px;
+            border-radius: 0;
+            left: calc(50% - 25px);
+            top: calc(50% - 25px);
+        }
+
+        #inner_square_2{
+            background-color: red;
+            width: 50px;
+            height: 50px;
+            border-radius: 0;
+            left: calc(50% - 25px);
+            top: calc(50% - 25px);
+        }
+
+        #inner_square_3{
+            background-color: red;
+            width: 50px;
+            height: 50px;
+            border-radius: 0;
+            left: calc(50% - 25px);
+            top: calc(50% - 25px);
+        }
+
+        #inner_square_4{
+            background-color: red;
+            width: 50px;
+            height: 50px;
+            border-radius: 0;
+            left: calc(50% - 25px);
+            top: calc(50% - 25px);
+        }
+
+
+        #inner_circle{
+            background-color: red;
+            width: 100px;
+            height: 100px;
+            left: calc(50% - 50px);
+            top: calc(50% - 50px);
+        }
+
+
+
+    </style>
+
+<body>
+
+        <section id="box_1" class="box">
+            <div id="center_circle_1">
+                <div id="inner_square_1"></div>
+            </div>
+        </section>
+
+        <section id="box_2" class="box">
+            <div id="center_circle_2">
+                <div id="inner_square_2"></div>
+            </div>
+        </section>
+
+
+        <section id="box_3" class="box">
+            <div id="center_circle_3">
+                <div id="inner_square_3"></div>
+            </div>
+        </section>
+
+
+        <section id="box_4" class="box">
+            <div id="center_circle_4">
+                <div id="inner_square_4"></div>
+            </div>
+        </section>
+
+        <div id="center_square">
+            <div id="inner_circle"></div>
+        </div>
+
+        <div id="corner_circle_1"></div>
+        <div id="corner_circle_2"></div>
+        <div id="corner_circle_3"></div>
+        <div id="corner_circle_4"></div>
+        <div id="corner_circle_5"></div>
+        <div id="corner_circle_6"></div>
+
+
+
+
+
+
+
+
+
+</body>
+</html>
