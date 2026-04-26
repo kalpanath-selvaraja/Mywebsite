@@ -21,3 +21,29 @@ window.addEventListener("scroll", () => {
 
 
 
+
+// Text show
+
+const role = document.getElementById("role");
+const text = role.textContent;
+
+role.textContent = "";
+role.style.opacity = 1;
+role.style.transform = "translateY(0)";
+role.style.animation = "none";
+
+setTimeout(() => {
+    let i = 0;
+    const type = () => {
+        if (i < text.length) {
+            role.textContent += text[i]; /* String */
+            i++;
+            setTimeout(type, 60);
+        }
+    };
+    type();
+}, 50);
+
+
+
+
