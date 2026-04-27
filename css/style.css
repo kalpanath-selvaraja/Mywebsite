@@ -1225,7 +1225,7 @@ button {
         display: none;
     }
 
-    .ed-uex-grid{
+    .edu-ex-grid{
         grid-template-columns: 1fr;
     }
     .experience-block {
@@ -1268,10 +1268,13 @@ button {
         height: 28px;
     }
 
-    .ed-uex-grid{
+    .edu-ex-grid{
         grid-template-columns: 1fr;
     }
 
+    .experience-block {
+        border-left: 0;
+    }
     .terminal{
         padding: 8px;
     }
@@ -1304,8 +1307,11 @@ button {
         max-width: 100%;
     }
 
-    .ed-uex-grid{
+    .edu-ex-grid{
         grid-template-columns: 1fr;
+    }
+    .experience-block {
+        border-left: 0;
     }
     .strip_icon img {
         width: 22px;
