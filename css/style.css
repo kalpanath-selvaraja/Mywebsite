@@ -776,7 +776,13 @@ button {
 .exercises-page {
     display: flex;
     height: 100vh;
-    padding-top: 65px;
+    padding: 65px 0 0 0;
+
+    width: 100%;
+
+    max-width: 100%;
+    margin: 0 auto;
+
 }
 
 .exercise-sidebar {
@@ -1253,6 +1259,7 @@ button {
 
     .exercises-page {
         flex-direction: column;
+
     }
 
     .exercise-sidebar {
