@@ -852,21 +852,25 @@ button {
 }
 
 .gallery-grid {
-    columns: 3;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     column-gap: 1rem;
     margin-top: 2rem;
 }
 
 .gallery-item {
-    break-inside: avoid;
+    /*break-inside: avoid;*/
     margin-bottom: 1rem;
     border-radius: 10px;
     overflow: hidden;
     border: 1px solid var(--border);
+    min-width: 200px;
+
 }
 
 .gallery-item img {
     width: 100%;
+    height: auto;
     display: block;
     transition: transform 0.4s ease;
 }
@@ -875,13 +879,7 @@ button {
     transform: scale(1.04);
 }
 
-@media (max-width: 768px) {
-    .gallery-grid { columns: 2; }
-}
 
-@media (max-width: 480px) {
-    .gallery-grid { columns: 1; }
-}
 
 /* Contact */
 
@@ -1230,6 +1228,7 @@ button {
     }
     .experience-block {
         border-left: 0;
+        padding: 0;
     }
 
 
@@ -1274,7 +1273,9 @@ button {
 
     .experience-block {
         border-left: 0;
+        padding: 0;
     }
+
     .terminal{
         padding: 8px;
     }
@@ -1283,6 +1284,9 @@ button {
         padding: 10px 4px;
     }
 
+    .gallery-grid{
+        grid-template-columns: 1fr 1fr;
+    }
 
     .contact-info{
         margin-left: 4px;
@@ -1300,6 +1304,12 @@ button {
     }
 }
 
+@media (max-width: 500px) {
+    .gallery-grid{
+        grid-template-columns: 1fr ;
+    }
+}
+
 @media (max-width: 380px) {
 
     .image{
@@ -1310,8 +1320,13 @@ button {
     .edu-ex-grid{
         grid-template-columns: 1fr;
     }
+
+    .gallery-grid{
+        grid-template-columns: 1fr ;
+    }
     .experience-block {
         border-left: 0;
+        padding: 0;
     }
     .strip_icon img {
         width: 22px;
