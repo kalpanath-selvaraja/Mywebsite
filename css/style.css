@@ -1227,8 +1227,9 @@ button {
         grid-template-columns: 1fr;
     }
     .experience-block {
-        border-left: 0;
-        padding: 0;
+            border-left: 0;
+            padding-left: 0;
+
     }
 
 
@@ -1273,7 +1274,8 @@ button {
 
     .experience-block {
         border-left: 0;
-        padding: 0;
+        padding-left: 0;
+
     }
 
     .terminal{
@@ -1326,7 +1328,8 @@ button {
     }
     .experience-block {
         border-left: 0;
-        padding: 0;
+        padding-left: 0;
+
     }
     .strip_icon img {
         width: 22px;
