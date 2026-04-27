@@ -5,6 +5,13 @@
     box-sizing: border-box;
 }
 
+section{
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 4rem 2rem;
+
+}
+
 
 /*variables*/
 :root{
@@ -428,7 +435,7 @@ button {
     margin: 20px 0;
 }
 
-
+/*  Skill Section   */
 .skill-section{
     max-width: 1100px;
     margin: 0 auto;
@@ -526,21 +533,61 @@ button {
 }
 
 
-.education-experience{
+/*  Services Section   */
+.services-section {
     max-width: 1100px;
     margin: 0 auto;
     padding: 8rem 2rem;
 }
 
-/*.group-title{*/
-/*    color: var(--text-primary);*/
-/*    font-size: var(--h2);*/
-/*    font-family: var(--font-title);*/
-/*    width: 100%;*/
-/*    display: flex;*/
-/*    margin-top: 0;*/
-/*    letter-spacing: 0.05em;*/
-/*}*/
+.service-cards {
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+
+.service-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 2rem;
+}
+
+
+.service-card:hover {
+    border-color: var(--accent);
+    box-shadow: 0 8px 30px rgba(16, 245, 160, 0.08);
+}
+
+.service-icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.service-title {
+    font-family: var(--font-mono);
+    font-size: 15px;
+    color: var(--accent);
+    letter-spacing: 1px;
+    margin-bottom: 0.8rem;
+}
+
+.service-desc {
+    font-family: var(--font-body);
+    font-size: 13.5px;
+    color: var(--text-muted);
+    line-height: 1.7;
+}
+/*  Education Section   */
+
+.education-experience{
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 8rem 2rem;
+}
 
 .edu-ex-grid{
     display: grid;
@@ -843,7 +890,7 @@ button {
 
 
 
-
+/*  gallery Section   */
 
 .gallery-section {
     max-width: 1100px;
@@ -853,18 +900,16 @@ button {
 
 .gallery-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     column-gap: 1rem;
     margin-top: 2rem;
 }
 
 .gallery-item {
-    /*break-inside: avoid;*/
     margin-bottom: 1rem;
     border-radius: 10px;
     overflow: hidden;
     border: 1px solid var(--border);
-    min-width: 200px;
 }
 
 .gallery-item img {
@@ -1125,15 +1170,14 @@ button {
     transform: translateX(0);
 }
 
-.stagger-child {
+.card-animation {
     opacity: 0;
-    transform: translateY(25px);
     transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
-.stagger-child.visible {
+.card-animation.visible {
     opacity: 1;
-    transform: translateY(0);
+
 }
 
 
@@ -1255,7 +1299,16 @@ button {
         margin-top: 20px;
     }
 
+    .hover-lift:hover {
+        transform: none;
+        box-shadow: none;
+    }
 
+    .service-card:hover {
+        transform: none;
+        box-shadow: none;
+        border-color: var(--border);
+    }
 
 }
 

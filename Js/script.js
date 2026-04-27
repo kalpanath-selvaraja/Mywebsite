@@ -1,4 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
+
+
     const sections = document.querySelectorAll("section[id]");
     const navLinks = document.querySelectorAll(".nav-links a");
 
@@ -6,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function() {
         let current = "";
 
         sections.forEach(section => {
-            const sectionTop = section.offsetTop;
+            const sectionTop = section.offsetTop - 100;
             if (window.scrollY >= sectionTop) {
                 current = section.getAttribute("id");
             }
@@ -30,42 +32,39 @@ document.addEventListener("DOMContentLoaded", function() {
     if (role) {
         const text = role.textContent;
         role.textContent = "";
-        role.style.opacity = 1;
-        role.style.transform = "translateY(0)";
-        role.style.animation = "none";
 
         setTimeout(() => {
             let i = 0;
-            const type = () => {
+            const start = () => {
                 if (i < text.length) {
                     role.textContent += text[i];
                     i++;
-                    setTimeout(type, 60);
+                    setTimeout(start, 60);
                 }
             };
-            type();
+            start();
         }, 500);
     }
 
 
 
     setTimeout(() => {
-        const animatedEls = document.querySelectorAll(".reveal, .slide-left, .slide-right, .stagger-child");
+        const animatedElements = document.querySelectorAll(".reveal, .slide-left, .slide-right, .card-animation");
 
         const observer = new IntersectionObserver((entries) => {
             entries.forEach((entry, index) => {
                 if (entry.isIntersecting) {
                     setTimeout(() => {
                         entry.target.classList.add("visible");
-                    }, entry.target.classList.contains("stagger-child") ? index * 100 : 0);
+                    }, entry.target.classList.contains("card-animation") ? index * 100 : 0);
                 }
             });
         }, { threshold: 0.15 });
 
-        animatedEls.forEach(el => observer.observe(el));
+        animatedElements.forEach(el => observer.observe(el));
     },300);
 
-
+//////////////
 
     const hamburger = document.getElementById("hamburger");
     const navMenu = document.getElementById("nav-links");
