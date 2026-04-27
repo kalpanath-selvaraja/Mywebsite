@@ -1223,13 +1223,22 @@ button {
         display: none;
     }
 
+    .gallery-section {
+        padding: 4rem 1rem;
+    }
+
     .edu-ex-grid{
         grid-template-columns: 1fr;
     }
+
     .experience-block {
             border-left: 0;
             padding-left: 0;
 
+    }
+
+    .gallery-grid {
+        justify-items: center;
     }
 
 
@@ -1248,7 +1257,7 @@ button {
 
 
 
-
+}
 
 
 @media (max-width: 600px) {
@@ -1297,8 +1306,8 @@ button {
     }
 
     .gallery-item{
-        width: 200px;
-        height: 200px;
+        width: 100px;
+        height: 180px;
     }
 
     .gallery-item img {
@@ -1343,6 +1352,7 @@ button {
     .gallery-grid{
         grid-template-columns: 1fr ;
     }
+
     .experience-block {
         border-left: 0;
         padding-left: 0;
@@ -1352,9 +1362,6 @@ button {
         width: 22px;
         height: 22px;
     }
-
-
-
 
     .field textarea{
         padding: 10px 4px;
