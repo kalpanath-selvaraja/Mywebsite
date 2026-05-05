@@ -93,12 +93,18 @@ body {
     border-bottom: 1px solid var(--border-accent);
 }
 
-.logo{
-    position: relative;
-    left: 0;
-    top: 10px;
+.logo {
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
 }
 
+.logo img {
+    height: 40px;
+    width: auto;
+    object-fit: cover;
+    object-position: right center;
+}
 
 
 
@@ -112,6 +118,9 @@ body {
     margin: auto;
 }
 
+.nav-links a{
+    font-size:var(--para);
+}
 
 .nav-links a.active {
     color: var(--accent);
@@ -350,15 +359,7 @@ button {
     font-size: var(--para);
 }
 
-/*@keyframes scroll {*/
-/*    from{ transform: translateX(0); }*/
-/*    to{ transform: translateX(-100%); }*/
-/*}*/
 
-
-/*.group-reverse {*/
-/*    animation: scroll-reverse 45s infinite linear;*/
-/*}*/
 
 @keyframes scroll-reverse {
     from{ transform: translateX(0); }
