@@ -561,8 +561,21 @@ button {
 }
 
 .service-icon {
-    font-size: 2rem;
+    font-size: 2.5rem;
+    line-height: 1;
     margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.service-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
 }
 
 .service-title {
@@ -773,7 +786,7 @@ button {
 /* Assignments  */
 .exercises-page {
     display: flex;
-    height: 100vh;
+    min-height: 100vh;
     padding: 65px 0 0 0;
 
     width: 100%;
@@ -887,6 +900,7 @@ button {
 
 .preview-frame {
     width: 100%;
+    min-height: 100vh;
     flex: 1;
     border: none;
     background: var(--bg-colour);
@@ -1305,6 +1319,15 @@ button {
 
     .footer{
         margin-top: 20px;
+    }
+
+    .footer-block {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .socials {
+        flex-wrap: wrap;
     }
 
     .hover-lift:hover {
